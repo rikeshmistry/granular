@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+body {
+  font-family: 'Lato', sans-serif;
+  /* Font-size to 14px */
+  font-size: 14px;
+  /* Line-height to 1.6 */
+  line-height: 1.6;
+  /* Text color to grey */
+  color: #333333;
+  /* Align things centrally */
+  text-align: center;
+}
+
+.scroll-effect {
+  /* Set the height of the element to 100% of the viewport height */
+  height: 100vh;
+  /* Stop the background from repearting/tiling */
+  background-repeat: no-repeat;
+  /* Stretch the background to cover the element */
+  background-size: cover;
+  /* Show the center bottom part of the image */
+  background-position: center;
+  /* Scroll content over background */
+  background-attachment: fixed;
+  /* When we want to position h3's at the bottom of our sections. Position: absolute only work if we select which elements we want to position relative to.... otherwise it jumps to the top of the page. So we apply position: relative to the sections */
+  position: relative;
+}
+
+/* Header */
+header {
+  background-image: url(../images/header.jpg);
+}
+
+nav {
+  position: absolute;
+  /* top: 50%;
+left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%); */
+  top: 100px;
+  right: 100px;
+}
+
+/* Challenge: Move the arrow to the middle of the screen, 40px from the bottom of the screen */
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  /* Both these rules move the arrow half it's width to the left */
+  /* margin: 0 0 0 -22px; */
+  transform: translateX(-50%);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+nav a {
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+/* Announcement */
+.highlight {
+  background-color: #e3e8ea;
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* Features */
+.feature {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+p {
+  margin-bottom: 60px;
+}
+
+/* Filters */
+#filter1 {
+  background-image: url(../images/one.jpg);
+}
+
+#filter2 {
+  background-image: url(../images/two.jpg);
+}
+
+#filter3 {
+  background-image: url(../images/three.jpg);
+}
+
+#filter4 {
+  background-image: url(../images/four.jpg);
+}
+
+#filter5 {
+  background-image: url(../images/five.jpg);
+}
+
+h3 {
+  color: white;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+/* Subscribe */
+.subscribe, footer {
+  background-color: #eed821;
+  padding: 50px 0;
+}
+
+/* This is styling out email text field */
+/* Alternative way: input[type="email"]{} */
+.email {
+  width: 60%;
+  /* Add a solid white 2px border */
+  border: 2px white solid;
+  /* Increase space inside the email box by 8px on all sides */
+  padding: 8px;
+  /* Round the corners by 5px */
+  border-radius: 5px;
+  /* centrally align the text */
+  text-align: center;
+  outline: none;
+  margin-bottom: 10px;
+  transition: border 0.3s;
+}
+
+.email:focus {
+  border: 2px solid #333333;
+}
+
+.button {
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding: 8px 0;
+  text-transform: uppercase;
+  transition: all 0.3s,
+}
+
+.button:hover {
+  border-color: white;
+  color: white;
+}
+
+/* Footer */
+footer {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+small {
+  color: white;
+}
+
+footer a {
+  /* Remove the underline */
+  text-decoration: none;
+  /* Make the text grey */
+  color: #333333;
+  /* Apply padding to the left & right of 10px */
+  padding: 0 10px;
+}
