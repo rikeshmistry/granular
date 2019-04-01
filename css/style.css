@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'sans-serif';
   /* Font-size to 14px */
   font-size: 14px;
   /* Line-height to 1.6 */
@@ -35,11 +35,11 @@ header {
 nav {
   position: absolute;
   /* top: 50%;
-left: 50%;
+  left: 50%;
   right: 50%;
   transform: translate(-50%, -50%); */
-  top: 100px;
   right: 100px;
+  top: 100px;
 }
 
 /* Challenge: Move the arrow to the middle of the screen, 40px from the bottom of the screen */
@@ -74,10 +74,10 @@ nav a:hover {
   padding: 50px 0;
 }
 
-h2 {
+h2, h4 {
   font-size: 26px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 700;
   margin-bottom: 40px;
 }
 
@@ -150,7 +150,7 @@ h3 {
   border: 2px solid #333333;
 }
 
-.button {
+.button, button {
   width: 60%;
   background-color: transparent;
   border: 2px solid #333333;
@@ -184,25 +184,107 @@ footer a {
   padding: 0 10px;
 }
 
+/* About page styles */
+.about {
+  background-image: url(../images/three.jpg);
+}
+
+.gallery {
+  /* Flexbox allow us to align items vertically and horizonally */
+  /* The use flexbox */
+  /* 1. Apply display: flex */
+  display: flex;
+  /* 2. Set the flex-direction */
+  flex-direction: row;
+  /* 3. Aligh the items either horizonally using justify-content or vertically using aligh-items */
+  justify-content: center;
+  /* Set whether you want the items to wrap on to different lines */
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  height: 200px;
+  margin: 0 0 20px 20px;
+}
+
+/* Pricing */
+.pricing {
+  background-image: url(../images/header.jpg);
+  height: auto;
+  padding: 50px 0;
+  color: white;
+}
+
+/* Pricing cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  background: #f2f2f3;
+  border-radius: 5px;
+  margin: 12px;
+  padding-bottom: 50px;
+  /* This property sets the width of our flexbox */
+  flex-basis: 250px;
+  align-item: center;
+}
+
+.card-big {
+  transform: scaleX(1.12);
+}
+
+.card-big button {
+  background: #EEDE00;
+}
+
+button:hover {
+  background: #333333;
+  color: white;
+}
+
+h4 {
+  background: #808080;
+  height: 80px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+li {
+  height: 20px;
+  margin: 10px auto;
+}
+
 /* Mobile Styles Media Query Styles */
 @media screen and (max-width: 760px) {
   .scroll-effect {
     background-attachment: scroll;
   }
-}
 
-nav {
-  position: static;
-  padding-top: 50px;
-}
+  nav {
+    position: static;
+    padding-top: 50px;
+  }
 
-.subscribe, .highlight, .feature {
-  padding: 20px;
-}
+  .subscribe, .highlight, .feature {
+    padding: 20px;
+  }
 
-/* Change the width of the email text field and button to 100% */
-.email, .button {
-  width: 100%;
+  /* Change the width of the email text field and button to 100% */
+  .email, .button {
+    width: 100%;
+  }
 }
 
 /* Mobile Styles Ends Here */
